@@ -167,16 +167,35 @@ nav .nav-logo img{height:36px;width:auto;display:block;}
 @media(max-width:760px){.cat-grid{grid-template-columns:1fr;}}
 
 /* COMO COMPRAR (steps) */
-.comprar-steps-section{background:var(--navy-deep);color:var(--bone);padding:120px 5vw;}
+.comprar-steps-section{background:var(--bone);color:var(--ink);padding:120px 5vw;}
 .comprar-steps-inner{max-width:1800px;margin:0 auto;}
-.comprar-steps-inner .section-head{border-bottom-color:rgba(241,236,221,0.18);}
-.comprar-steps-inner .section-head h3{color:var(--bone);}
+.comprar-steps-inner .section-head{border-bottom-color:rgba(17,19,24,0.15);}
+.comprar-steps-inner .section-head h3{color:var(--ink);}
+.comprar-steps-inner .section-head p{color:var(--ink);}
 .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;}
 .paso .num{font-family:'Fraunces',serif;font-size:14px;color:var(--gold);letter-spacing:0.1em;margin-bottom:14px;}
-.paso h4{font-family:'Fraunces',serif;font-weight:400;font-size:19px;margin-bottom:10px;}
-.paso p{font-size:14px;line-height:1.7;opacity:0.75;}
+.paso h4{font-family:'Fraunces',serif;font-weight:400;font-size:19px;margin-bottom:10px;color:var(--ink);}
+.paso p{font-size:14px;line-height:1.7;color:var(--ink);opacity:0.72;}
 @media(max-width:1000px){.pasos{grid-template-columns:repeat(2,1fr);gap:32px;}}
 @media(max-width:560px){.pasos{grid-template-columns:1fr;}}
+
+/* NOTA HECHO A PEDIDO */
+.hecho-a-pedido{
+  max-width:1800px;margin:0 auto;
+  padding:0 5vw 60px;
+}
+.hecho-a-pedido blockquote{
+  font-family:'Fraunces',serif;
+  font-style:italic;
+  font-weight:300;
+  font-size:clamp(17px,1.6vw,20px);
+  line-height:1.7;
+  color:var(--bone);
+  opacity:0.88;
+  max-width:70ch;
+  border-left:2px solid var(--gold);
+  padding-left:28px;
+}
 
 /* COMPRAR FORM PAGE */
 .comprar{background:var(--navy-deep);color:var(--bone);padding:90px 5vw 130px;}
@@ -267,7 +286,7 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
   <div class="contact-drawer-title">Contactos</div>
   <a class="contact-row" href="https://instagram.com/romeriromero_" target="_blank" rel="noopener">Instagram</a>
   <a class="contact-row" href="https://tiktok.com/@romeriromero_" target="_blank" rel="noopener">TikTok</a>
-  <a class="contact-row" href="https://wa.me/593990550832" target="_blank" rel="noopener">+593 99 055 0832</a>
+  <a class="contact-row" href="https://wa.me/593990550832" target="_blank" rel="noopener">Número de contacto</a>
   <a class="contact-row" href="mailto:romeriromeroqualita@gmail.com">romeriromeroqualita@gmail.com</a>
 </aside>
 
@@ -308,7 +327,7 @@ function closeContact(){
         <span>Contactos</span>
         <a href="https://instagram.com/romeriromero_" target="_blank" rel="noopener">Instagram</a>
         <a href="https://tiktok.com/@romeriromero_" target="_blank" rel="noopener">TikTok</a>
-        <a href="https://wa.me/593990550832" target="_blank" rel="noopener">+593 99 055 0832</a>
+        <a href="https://wa.me/593990550832" target="_blank" rel="noopener">Número de contacto</a>
         <a href="mailto:romeriromeroqualita@gmail.com">romeriromeroqualita@gmail.com</a>
       </div>
     </div>
