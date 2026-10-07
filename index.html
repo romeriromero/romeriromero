@@ -199,19 +199,6 @@ nav .nav-logo img{height:36px;width:auto;display:block;}
 @media(max-width:1100px){.cat-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.cat-grid{grid-template-columns:1fr;}}
 
-/* COMO COMPRAR (steps) */
-.comprar-steps-section{background:var(--bone);color:var(--ink);padding:120px 5vw;}
-.comprar-steps-inner{max-width:1800px;margin:0 auto;}
-.comprar-steps-inner .section-head{border-bottom-color:rgba(17,19,24,0.15);}
-.comprar-steps-inner .section-head h3{color:var(--ink);}
-.comprar-steps-inner .section-head p{color:var(--ink);}
-.pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;}
-.paso .num{font-family:'Fraunces',serif;font-size:14px;color:var(--gold);letter-spacing:0.1em;margin-bottom:14px;}
-.paso h4{font-family:'Fraunces',serif;font-weight:400;font-size:19px;margin-bottom:10px;color:var(--ink);}
-.paso p{font-size:14px;line-height:1.7;color:var(--ink);opacity:0.72;}
-@media(max-width:1000px){.pasos{grid-template-columns:repeat(2,1fr);gap:32px;}}
-@media(max-width:560px){.pasos{grid-template-columns:1fr;}}
-
 /* NOTA HECHO A PEDIDO */
 .hecho-a-pedido{
   max-width:1800px;margin:0 auto;
@@ -303,6 +290,7 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
   .foot-links{flex-wrap:wrap;gap:32px;}
 }
 
+.contact-drawer:not(.active){box-shadow:none;}
 </style>
 </head>
 <body>
@@ -366,37 +354,6 @@ function closeContact(){
       <h4>Camisetas</h4>
       <div class="meta">La base de todos los días</div>
     </a>
-  </div>
-</section>
-
-<section class="comprar-steps-section" id="comprar">
-  <div class="comprar-steps-inner">
-    <div class="section-head">
-      <h3>Cómo Comprar</h3>
-      <p>Pedidos atendidos uno a uno, como debe ser en una casa que recién empieza.</p>
-    </div>
-    <div class="pasos">
-      <div class="paso">
-        <div class="num">01</div>
-        <h4>Elige tu pieza</h4>
-        <p>Entra a la línea que te interesa y elige color y diseño.</p>
-      </div>
-      <div class="paso">
-        <div class="num">02</div>
-        <h4>Envía tu pedido</h4>
-        <p>Completa el formulario con tus datos. Recibirás una confirmación con el total y los datos de pago.</p>
-      </div>
-      <div class="paso">
-        <div class="num">03</div>
-        <h4>Realiza la transferencia</h4>
-        <p>Los datos bancarios se envían de forma privada al confirmar tu pedido, nunca se publican aquí.</p>
-      </div>
-      <div class="paso">
-        <div class="num">04</div>
-        <h4>Recibe tu prenda</h4>
-        <p>Verificamos el pago, preparamos tu pedido y coordinamos el envío a cualquier parte de Ecuador.</p>
-      </div>
-    </div>
   </div>
 </section>
 
