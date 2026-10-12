@@ -4,6 +4,8 @@
    edita solo las listas MENU y CONTACTO de aquí abajo.
    ============================================================ */
 (function () {
+  var WHATSAPP = '593990550832';
+
   var MENU = [
     { label: 'Colecciones', href: 'index.html#coleccion', children: [
       { label: 'Polos', href: 'coleccion-polos.html' },
@@ -18,7 +20,7 @@
   var CONTACTO = [
     { label: 'Instagram', href: 'https://instagram.com/romeriromero_', external: true },
     { label: 'TikTok', href: 'https://tiktok.com/@romeriromero_', external: true },
-    { label: 'Número de contacto', href: 'https://wa.me/593990550832', external: true },
+    { label: 'Número de contacto', href: 'https://wa.me/' + WHATSAPP, external: true },
     { label: 'romeriromeroqualita@gmail.com', href: 'mailto:romeriromeroqualita@gmail.com' }
   ];
 
@@ -65,12 +67,17 @@
       '<button type="button" class="drawer-close" aria-label="Cerrar contactos">&times;</button>' +
       '<div class="drawer-title">Contactos</div>' +
       contactHTML +
+    '</aside>' +
+    '<aside class="drawer drawer-right" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Carrito" aria-hidden="true">' +
+      '<button type="button" class="drawer-close" aria-label="Cerrar carrito">&times;</button>' +
+      '<div class="drawer-title">Carrito</div>' +
+      '<div id="cartBody"></div>' +
     '</aside>';
   while (wrap.firstChild) document.body.appendChild(wrap.firstChild);
 
   /* ---------- comportamiento ---------- */
   var overlay = document.getElementById('drawerOverlay');
-  var drawers = { menu: document.getElementById('menuDrawer'), contact: document.getElementById('contactDrawer') };
+  var drawers = { menu: document.getElementById('menuDrawer'), contact: document.getElementById('contactDrawer'), cart: document.getElementById('cartDrawer') };
   var toggle = document.querySelector('.menu-toggle');
   var openKey = null;
   var lastFocus = null;
@@ -131,6 +138,8 @@
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });
+
+  window.RR = { open: open, close: function () { closeAll(true); }, whatsapp: WHATSAPP };
 
   /* compatibilidad con el código anterior */
   window.openContact = function (e) { if (e) e.preventDefault(); open('contact'); };

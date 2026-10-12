@@ -1,0 +1,39 @@
+/* Carrito de compras — Romeri Romero */
+.site-nav .nav-right{justify-self:end;}
+.cart-toggle{
+  position:relative;width:44px;height:44px;margin-right:-11px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:none;border:none;cursor:pointer;color:var(--ink);opacity:0.78;
+}
+.cart-toggle:hover{opacity:1;}
+.cart-toggle:focus-visible,.cart-btn:focus-visible,.cart-qty button:focus-visible,.cart-del:focus-visible,.cart-link:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.cart-count{
+  position:absolute;top:4px;right:2px;min-width:17px;height:17px;padding:0 4px;
+  border-radius:9px;background:var(--navy);color:var(--bone);
+  font-family:'Space Grotesk',sans-serif;font-size:10px;line-height:17px;text-align:center;
+}
+.cart-count[hidden]{display:none;}
+
+.cart-empty{font-size:15px;opacity:0.75;margin-bottom:18px;}
+.cart-link{font-size:14px;color:var(--ink);border-bottom:1px solid var(--gold);text-decoration:none;padding-bottom:2px;}
+.cart-line{padding:18px 0;border-bottom:1px solid rgba(17,19,24,0.12);}
+.cart-line-top{display:flex;justify-content:space-between;gap:14px;font-family:'Fraunces',serif;font-size:19px;}
+.cart-line-top span:last-child{font-family:'Space Grotesk',sans-serif;font-size:15px;white-space:nowrap;}
+.cart-detail{font-size:13px;line-height:1.5;opacity:0.7;margin:6px 0 12px;}
+.cart-line-bottom{display:flex;justify-content:space-between;align-items:center;}
+.cart-qty{display:inline-flex;align-items:center;border:1px solid rgba(17,19,24,0.25);border-radius:2px;}
+.cart-qty button{width:32px;height:32px;background:none;border:none;font-size:17px;cursor:pointer;color:var(--ink);}
+.cart-qty span{min-width:26px;text-align:center;font-size:14px;}
+.cart-del{background:none;border:none;font-size:13px;color:var(--ink);opacity:0.6;cursor:pointer;text-decoration:underline;font-family:'Space Grotesk',sans-serif;}
+.cart-del:hover{opacity:1;}
+.cart-total{display:flex;justify-content:space-between;font-size:16px;padding:22px 0 6px;}
+.cart-note{font-size:12.5px;line-height:1.55;opacity:0.62;margin-bottom:20px;}
+.cart-btn{
+  display:block;width:100%;text-align:center;box-sizing:border-box;
+  font-family:'Space Grotesk',sans-serif;font-size:14px;letter-spacing:0.05em;
+  padding:15px 12px;margin-bottom:10px;border-radius:2px;text-decoration:none;cursor:pointer;
+  background:var(--navy);color:var(--bone);border:1px solid var(--navy);
+}
+.cart-btn:hover{opacity:0.9;}
+.cart-btn.ghost{background:transparent;color:var(--ink);border-color:rgba(17,19,24,0.3);cursor:not-allowed;opacity:0.55;}
+.buy:disabled{opacity:0.45;cursor:not-allowed;}

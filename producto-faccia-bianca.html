@@ -309,6 +309,7 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
 
 </style>
 <link rel="stylesheet" href="menu.css?v=2">
+<link rel="stylesheet" href="cart.css?v=1">
 </head>
 <body>
 
@@ -321,10 +322,10 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
 </header>
 
 <div class="pdp">
-  <div class="pdp-media"><img id="mainImg" src="img/faccia-bianca.jpg" alt="Faccia Blanca"></div>
+  <div class="pdp-media"><img id="mainImg" src="img/faccia-bianca.jpg" alt="Faccia Bianca"></div>
   <div class="pdp-info">
     <div class="crumbs"><a href="index.html#coleccion">Colección</a> / <a href="coleccion-polos.html">Polos</a></div>
-    <h1>Faccia Blanca</h1>
+    <h1>Faccia Bianca</h1>
     <div class="pdp-price" id="pdpPrice">$45.00</div>
 
     <div class="opt-label"><b>Talla</b></div>
@@ -341,9 +342,6 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
 
 <script>
 (function(){
-  // Enlace al que lleva el botón "Comprar". Por ahora es la página de prueba;
-  // cuando tengas el link de Payphone, cambia solo esta línea.
-  var PAYMENT_URL = 'comprar.html';
   var INITIALS_PRICE = 7;
 
   var P = window.PRODUCT;
@@ -397,7 +395,7 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
       document.querySelector('.size').focus();
       return;
     }
-    window.location.href = PAYMENT_URL;
+    RRCart.addFromProduct(P, state, typeof INITIALS_PRICE === 'number' ? INITIALS_PRICE : 0);
   });
 
   renderPrice();
@@ -428,6 +426,7 @@ footer .foot-top, footer .foot-bottom{max-width:1800px;margin-left:auto;margin-r
 </footer>
 
 
-<script src="menu.js?v=2" defer></script>
+<script src="menu.js?v=3" defer></script>
+<script src="cart.js?v=1" defer></script>
 </body>
 </html>
